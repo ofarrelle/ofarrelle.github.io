@@ -117,15 +117,18 @@ scatter_container.append("g")
     .attr("y", 40)
     .attr("text-anchor", "middle")
     .text("Population (log scale)")
-    .style("fill", "black");
+    .style("fill", "white");
 
 scatter_container.append("g")
     .attr("transform", `translate(${margin.left}, 0)`)
     .call(d3.axisLeft(scatterLifeScale))
     .append("text")
-    .attr("x", -30)
-    .attr("y", margin.top)
+    .attr("y", 0)
+    .attr("x", 0)
+    .attr("dy", `-${margin.left / 2}`)
+    .attr("dx", `-${height - margin.bottom - 5}`)
     .attr("text-anchor", "start")
-    .text("Life Expectancy")
-    .style("fill", "black");
+    .attr("transform",`rotate(-90)`)
+    .text("Life Expectancy (year)")
+    .style("fill", "white");
 

@@ -1,0 +1,53 @@
+body { 
+	/* aligns all inline contents in the centre */
+	text-align: center;
+}
+
+.introduction {
+	/* set to 70% width of the parent div */
+	width: 50%;
+	/* place in the middle */
+	margin-left: auto;
+	margin-right: auto;
+	/* set font family */
+	font-family: Lato;
+}
+
+.padded {
+	/* place 5px padding top and bottom; 12px padding left and right */
+	padding: 5px 12px;
+}
+
+.instruction {
+	/* set background and font colours */
+	background: #3e3e3e;
+	color: white;
+}
+
+.explain {
+	/* adjust line height */
+	line-height: 1.5em;
+}
+
+.link {
+	/* override text align */
+	text-align: right;
+	/* italicize */
+	font-style: italic;
+	/* set to 70% width of the parent div */
+	width: 70%;
+	/* place on the right */
+	margin-left: auto;
+}
+
+.viz {
+	/* set font family */
+	font-family: Quintessential;
+	background: #3e3e3e;
+	color: white;
+}
+
+code {
+	background: blue;
+	color: white;
+}

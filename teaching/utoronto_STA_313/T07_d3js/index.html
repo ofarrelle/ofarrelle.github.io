@@ -4,38 +4,50 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- include a Lato & Quintessential font families from https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <!-- include the styles.css style sheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
     <title>T07 - D3.js</title>
 </head>
 
 <body>
-    <h1>Simple D3 Multi-plot Interaction</h1>
+    <div class="introduction">
+        <h1>Simple D3 Multi-plot Interaction</h1>
+        <!-- you can assign many classes to an element -->
+        <div class="instruction padded">
+            <p>
+                Click on a bar in the bar chart to highlight countries in that region cluster in the scatter plot below.
+            </p>
+        </div>
+        <div class="explain padded">
+            <p>
+                View the accompanying <code>main.js</code> file to see how this is accomplished.
+                The Bar and Point objects are saved as variables. D3.js specifies the <code>selection.on()</code>
+                function to add event listeners to each object. When a Bar is clicked, listener object is a tuple of (event, d)
+                where <code>d</code> is the data object for that Bar. From here we can retrieve the cluster of the clicked Bar
+                and
+                it to the function <code>updateSelection()</code>, which updates the opacity of all Bars and Points.
+            </p>
+        </div>
+        <div class="link padded">
+            <p>
+                See the documentation at
+                <a href="https://d3js.org/d3-selection/events#selection_on" target="_blank">d3js.org</a>
+                for more details. Specifically reference the 2nd paragraph.
+            </p>
+        </div>
+    </div>
+    <div class="viz padded">
+        <h2>Life Expectancy by Region Cluster</h2>
+        <div id="bar-chart"></div>
 
-    <p>
-        Click on a bar in the bar chart to highlight countries in that region cluster in the scatter plot below.
-    </p>
-
-    <p>
-        View the accompanying <code>main.js</code> file to see how this is accomplished.
-        The Bar and Point objects are saved as variables. D3.js specifies the <code>selection.on()</code>
-        function to add event listeners to each object. When a Bar is clicked, listener object is a tuple of (event, d)
-        where <code>d</code> is the data object for that Bar. From here we can retrieve the cluster of the clicked Bar
-        and
-        it to the function <code>updateSelection()</code>, which updates the opacity of all Bars and Points.
-    </p>
-
-    <p>
-        See the documentation at
-        <a href="https://d3js.org/d3-selection/events#selection_on" target="_blank">d3js.org</a>
-        for more details. Specifically reference the 2nd paragraph.
-    </p>
-
-    <h2>Life Expectancy by Region Cluster</h2>
-    <div id="bar-chart"></div>
-
-    <h2>Countries</h2>
-    <div id="scatter-plot"></div>
-
+        <h2>Countries</h2>
+        <div id="scatter-plot"></div>
+    </div>
     <script src="main.js" type="module"></script>
 </body>
-
 </html>
