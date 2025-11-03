@@ -7,10 +7,12 @@
     <!-- include a Lato & Quintessential font families from https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <!-- include the styles.css style sheet -->
-    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>T07 - D3.js</title>
 </head>
 
@@ -25,10 +27,14 @@
         </div>
         <div class="explain padded">
             <p>
-                View the accompanying <code>main.js</code> file to see how this is accomplished.
+                View the accompanying <a
+                    href="https://github.com/ofarrelle/ofarrelle.github.io/tree/master/teaching/utoronto_STA_313/T07_d3js"><code>main.js</code>
+                </a>file to see how this is accomplished.
                 The Bar and Point objects are saved as variables. D3.js specifies the <code>selection.on()</code>
-                function to add event listeners to each object. When a Bar is clicked, listener object is a tuple of (event, d)
-                where <code>d</code> is the data object for that Bar. From here we can retrieve the cluster of the clicked Bar
+                function to add event listeners to each object. When a Bar is clicked, listener object is a tuple of
+                (event, d)
+                where <code>d</code> is the data object for that Bar. From here we can retrieve the cluster of the
+                clicked Bar
                 and
                 it to the function <code>updateSelection()</code>, which updates the opacity of all Bars and Points.
             </p>
@@ -50,4 +56,5 @@
     </div>
     <script src="main.js" type="module"></script>
 </body>
+
 </html>
